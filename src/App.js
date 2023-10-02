@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { useState,useEffect } from 'react';
 import './App.css';
+import Idcard from "../src/PdfRenderer/Idcard"
+import Imagg from "../src/PdfRenderer/Image"
+import PdfDownload from "../src/PdfRenderer/PdfDownload"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Data from "./UserData.json"
 
 function App() {
+  console.log(Data,"value");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>app.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App">  
+     <Router>
+        <Routes>
+        <Route exact={true} path=":id" element={<Idcard />} />
+        <Route exact={true} path="/image" element={<Imagg />} />
+        <Route exact={true} path="/user/:num" element={<PdfDownload />} />
+        <Route exact={true} path="/image" element={<Imagg />} />
+
+        </Routes>
+</Router>
+     
     </div>
   );
 }
