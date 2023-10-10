@@ -260,11 +260,11 @@ const Renderer = ({id}) => {
                       <Text style={styles.id_box_text2}>{Data[id].ContactNo}</Text>
                     </View>
                     
-                      <View>
+                    { Data[id].CA !=="None"  && <View>
                         <Text style={styles.id_box_text1}>CA ID</Text>
-                        <Text style={styles.id_box_text2}>{Data[id].Referred_By}</Text>
+                        <Text style={styles.id_box_text2}>{Data[id].CA}</Text>
 
-                      </View>
+                      </View> }
                     
                   </View>
 
@@ -276,9 +276,9 @@ const Renderer = ({id}) => {
                   </Text>
 
                   <Text style={styles.id_box_text1}>CA Referral & Name</Text>
-                  {Data[id].Referred_By ? (
+                  {Data[id].Referred_By !=="None" ? (
                     <Text style={styles.id_box_text2}>
-                     {Data[id].Referred_By}
+                     {Data[id].Referred_By} ({Data[id].CA_Name})
                     </Text>
                   ) : (
                     <Text style={styles.id_box_text2}>None</Text>

@@ -90,10 +90,10 @@ const Idcard = () => {
                 <div className="dataSize">{Data[id].ContactNo}</div>
               </div>
               {/* {" "} */}
-              {Data[id].is_ca === true &&
+              {!Data[id].CA === "None" &&
               (<div className="id_ca_id">
                 <div>CA-ID :</div>
-                <div className="dataSize">{Data[id].Referred_By}</div>
+                <div className="dataSize">{Data[id].CA}</div>
               </div>)
               }
             </div>
@@ -106,7 +106,7 @@ const Idcard = () => {
             (<div className="id_ca_referral">
               <div>CA-Referral and Name</div>
               <div className="dataSize">
-                {Data[id].Referred_By}
+                {Data[id].Referred_By} ({Data[id].CA_Name})
               </div>
             </div>)
             <div className="id_accomodation">
