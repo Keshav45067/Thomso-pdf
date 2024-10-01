@@ -125,6 +125,7 @@ const styles = StyleSheet.create({
   },
 
   id_box_image: {
+    objectFit: "cover",
     height: "50%",
     width: "100%",
     border: "1px solid black",
