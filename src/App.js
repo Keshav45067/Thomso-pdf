@@ -3,7 +3,7 @@ import './App.css';
 import Idcard from "../src/PdfRenderer/Idcard"
 import Imagg from "../src/PdfRenderer/Image"
 import PdfDownload from "../src/PdfRenderer/PdfDownload"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Data from "./UserData.json"
 
 function App() {
