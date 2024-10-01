@@ -243,13 +243,13 @@ const Renderer = ({id}) => {
               <View style={styles.id_box}>
                 <View style={styles.id_box_left}>
                    
-                    <Image src={id_logo} style={styles.id_box_image} />
+                    <Image src={Data[id].Avtar===""?id_logo:`https://api2.thomso.in/media/${Data[id].Avtar}`} style={styles.id_box_image} />
                   
                   <Image src={items} style={styles.id_box_qr} />
                 </View>
 
                 <View style={styles.id_box_right}>
-                  <Text style={styles.id_box_id}>{Data[id].ThomsoId}</Text>
+                  <Text style={styles.id_box_id}>{Data[id]["Thomso Id"]}</Text>
 
                   <Text style={styles.id_box_text1}>Name</Text>
                   <Text style={styles.id_box_text2}>{Data[id].Name}</Text>
@@ -257,7 +257,7 @@ const Renderer = ({id}) => {
                   <View style={styles.id_box_text_split}>
                     <View>
                       <Text style={styles.id_box_text1}>Contact</Text>
-                      <Text style={styles.id_box_text2}>{Data[id].ContactNo}</Text>
+                      <Text style={styles.id_box_text2}>{Data[id]["Contact No."]}</Text>
                     </View>
                     
                     { Data[id].CA !=="None"  && <View>

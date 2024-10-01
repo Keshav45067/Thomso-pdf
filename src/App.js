@@ -15,8 +15,6 @@ function App() {
         <Route exact={true} path=":id" element={<Idcard />} />
         <Route exact={true} path="/image" element={<Imagg />} />
         <Route exact={true} path="/user/:num" element={<PdfDownload />} />
-        <Route exact={true} path="/image" element={<Imagg />} />
-
         </Routes>
 </Router>
      

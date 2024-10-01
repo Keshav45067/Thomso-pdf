@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { PDFDownloadLink,PDFViewer } from "@react-pdf/renderer";
 import Renderer from "./Renderer"
 import { useLocation, Link,useParams } from "react-router-dom";
+import Data from "../UserData.json"
 
 import "./Pdfcss.css"
  const PdfDownload =()=> {

@@ -32,7 +32,7 @@ const Idcard = () => {
   
   const Verify = ()=>{
     // console.log("sajclx");
-    setQr(Data[id].ThomsoId);
+    setQr(Data[id]["Thomso Id"]);
     setVisible(true);
     setTimeout(() => {
       const canvas =   document.getElementById("myqr");
